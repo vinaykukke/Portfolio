@@ -1,26 +1,24 @@
 import * as React from "react";
+import LinkedIn from "components/Logos/LinkedIn";
 import styles from "./displaycard.module.scss";
 
 const DisplayCard = () => {
   return (
     <div className={styles.cardContainer}>
-      <span className={styles.pro}>PRO</span>
+      <span className={styles.pro}>Señor Developer</span>
       <img
         className={styles.round}
-        src="https://randomuser.me/api/portraits/women/79.jpg"
+        src="https://randomuser.me/api/portraits/men/9.jpg"
         alt="user"
       />
-      <h3>Ricky Park</h3>
-      <h6>New York</h6>
+      <h3>Vinay Kukke</h3>
+      <h5>Bangalore, India</h5>
       <p>
         User interface designer and <br /> front-end developer
       </p>
-      <div className={styles.buttons}>
-        <button className={styles.primary}>Message</button>
-        <button className={`${styles.primary} ${styles.ghost}`}>
-          Following
-        </button>
-      </div>
+      <a href="https://linkedin.com/in/vinay-kukke" target="_blank">
+        <LinkedIn />
+      </a>
       <div className={styles.skills}>
         <h6>Skills</h6>
         <ul>
