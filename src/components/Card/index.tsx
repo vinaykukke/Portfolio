@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { ICardProps } from "./types";
-import styles from "./Card.module.scss";
+import styles from "./card.module.scss";
 
 const Card = (props: ICardProps) => {
   const {

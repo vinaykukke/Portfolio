@@ -5,34 +5,32 @@ const getMetaTags = () => (
   <>
     <meta
       property="og:title"
-      content="The Oro Coffee Company - Product Listings"
+      content="Vinay Kukke - Javascript / Web Developer / Contractor"
       key="title"
     />
     <meta property="og:type" content="website" />
     <meta name="geo.placename" content="Bengaluru" />
     <meta name="geo.region" content="IN-KA" />
     <meta name="Keywords" content={keyWords.join(", ")} />
-    <meta property="og:site_name" content="The Oro Coffee Company" />
-    <meta property="og:url" content="https://kukke.coffee/oro" />
+    <meta
+      property="og:site_name"
+      content="Vinay Kukke - Javascript / Web Developer / Contractor"
+    />
+    <meta property="og:url" content="https://kukke.dev" />
     <meta
       property="og:description"
-      content="The Oro Coffee Company brings you fresh premium sourced coffee beans, 
-        roasted with care, from the best farms across India. Order yours online now!"
+      content="Experienced Full Stack Developer: Javascript "
     />
     <meta
       property="og:image"
-      content="https://kukke.coffee/_next/image?url=%2Flogos%2Flogo-main.png&w=2048&q=75"
+      content="https://kukke.dev/_next/image?url=%2Flogos%2Fvk.png"
     />
     <meta
       name="description"
       key="description"
-      content="The Oro Coffee Company is a coffee powder manufacturer, supplier, wholesaler 
-        and exporter in Bengaluru, Karnataka. We offer the best coffee prices on Filter Coffee, Espresso Blends,
-        Instant Coffee - Spray Dried, Instant Coffee - Agglomerated, Arabica - Green Beans, 
-        Robusta - Green Beans, Arabica - Roasted Coffee Beans, Robusta - Roasted Coffee Beans.
-        We also offer premium grade coffee beans: Arabica - AAA, AA, PB, Robusta - AAA, AA, PB"
+      content="Experienced Full Stack Developer with a demonstrated history of working in the software industry. Building apps for mobile and web. Skilled in NodeJS, React, React Native, Typescript, Javascript, vanilla JavaScript, NextJS, Graphql, Redux, Redux Sagas, Flutter, AWS, Strapi, Shopify, Apollo, Docker, Firebase, MongoDB, Webpack, SocketIO, HTML5, CSS, SCSS, Wordpress, Drupal, Google Analytics and PHP. Strong engineering professional with a Bachelors degree in electrical and electronics engineering with a focus in communication and a Masters degree in Computer Science"
     />
-    <link rel="canonical" href="https://kukke.coffee/oro" key="canonical" />
+    <link rel="canonical" href="https://kukke.dev" key="canonical" />
   </>
 );
 

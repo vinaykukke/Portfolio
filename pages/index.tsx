@@ -3,6 +3,7 @@ import Link from "next/link";
 import BrandIcon from "components/Logos/BrandIcon";
 import JsIcon from "components/Logos/JsIcon";
 import styles from "styles/home.module.scss";
+import getMetaTags from "data/metaData";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
           rel="stylesheet"
         />
         <meta charSet="UTF-8" />
+        {getMetaTags()}
       </Head>
 
       <main className={styles.main}>
