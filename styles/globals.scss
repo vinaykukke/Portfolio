@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+@custom-media --phone (max-width: 1023px);
+@custom-media --desktop (min-width: 1024px);
+@custom-media --desktop-mdpi (min-width: 1024px) and (max-width: 1365px);
+@custom-media --desktop-hdpi (min-width: 1366px);
+
+:root {
+  /** Background Colors */
+  --container-background: #292929;
+  --primary-logo-background: #000000;
+
+  /** Link Colors */
+  --link-color: #0070f3;
+
+  /** General Colors */
+  --lightblue: #3d9dea;
+  --darkblue: #4a4eee;
+
+  /** Text Colors */
+  --text-color: #d5e1ef;
+  --hero-text-color: #f7484e;
+  --primary-logo-text: #fad02c;
+
+  /** Gradients */
+  --bg-shape-color: linear-gradient(120deg, #343a4f, #0f1620);
+  --container-gradient: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+
+  /** Spacing */
+  --xs-spacing: 5px;
+  --s-spacing: 10px;
+  --m-spacing: 15px;
+  --l-spacing: 20px;
+  --xl-spacing: 25px;
+  --xxl-spacing: 30px;
+  --xxxl-spacing: 35px;
+  --xxxxl-spacing: 40px;
+  --xxxxxl-spacing: 45px;
+  --xxxxxxl-spacing: 50px;
+
+  /** Border Radius */
+  --xl-border-radius: 16px;
+  --l-border-radius: 8px;
+  --border-radius: 6px;
+  --s-border-radius: 4px;
+  --xs-border-radius: 2px;
+
+  /** Fonts */
+  --h-font-size: 42px;
+  --xxxxxl-font-size: 36px;
+  --xxxxl-font-size: 30px;
+  --xxxl-font-size: 26px;
+  --xxl-font-size: 24px;
+  --xl-font-size: 20px;
+  --l-font-size: 18px;
+  --default-font-size: 16px;
+  --m-font-size: 14px;
+  --s-font-size: 12px;
+  --xs-font-size: 10px;
+  --xxs-font-size: 8px;
+  --font-family: "Roboto", sans-serif;
+  --regular-weight: 400;
+  --semi-bold: 600;
+  --bold: 700;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
