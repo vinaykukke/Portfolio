@@ -40,24 +40,6 @@
   border-radius: 5px;
 }
 
-.primary {
-  cursor: pointer;
-  margin: 0 10px;
-  background-color: #03bfcb;
-  border: 1px solid #03bfcb;
-  border-radius: 3px;
-  color: #231e39;
-  font-family: Montserrat, sans-serif;
-  font-weight: 500;
-  padding: 10px 25px;
-  &.ghost {
-    background-color: transparent;
-    color: #02899c;
-  }
-}
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
 .skills {
   background-color: #1f1a36;
   text-align: left;
