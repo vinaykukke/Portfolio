@@ -10,6 +10,10 @@
   max-width: 100%;
   text-align: center;
 
+  @media screen and (max-height: 1600px) {
+    zoom: 75%;
+  }
+
   .pro {
     color: #231e39;
     background-color: #febb0b;
@@ -20,12 +24,13 @@
     position: absolute;
     top: 30px;
     left: 30px;
+    z-index: 5000;
   }
 
   .round {
     border: 1px solid var(--darkblue);
-    border-radius: 50%;
     padding: 7px;
+    object-fit: contain;
   }
 
   .name {
