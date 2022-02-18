@@ -35,9 +35,13 @@ const Header = () => (
       <DockerLogo />
     </div>
     <Nav />
-    <div className="social">
+    <a
+      className="social"
+      href="https://www.linkedin.com/in/vinay-kukke"
+      target="_blank"
+    >
       <LinkedIn />
-    </div>
+    </a>
   </div>
 );
 

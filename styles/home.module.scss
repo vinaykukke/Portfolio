@@ -1,148 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 .main {
   height: 100vh;
   padding: 2em 0;
   background-color: var(--container-background);
   font-size: var(--default-font-size);
+  overflow-y: scroll;
 
   .container {
-    margin-left: 300px;
+    margin: 8rem 0 8rem 18.75rem;
   }
 }
 
 .heroElement {
   width: 100%;
   height: 100%;
+  line-height: 9.375em;
+  position: relative;
 
-  .heroTitle {
-    text-transform: capitalize;
+  h1 {
+    font-size: 6em;
+    font-weight: var(--bold);
+    color: white;
+    width: fit-content;
+    margin: 0;
+  }
 
-    h1 {
-      font-size: 4.625em;
-      font-weight: var(--bold);
-      color: white;
-    }
+  .marginLeft {
+    margin-left: 0.25em;
+  }
 
-    span {
-      font-size: 1.5em;
-      color: #8d8d8d;
-    }
-
-    .webDeveloper {
-      &::after {
-        content: "/";
+  .rubberband {
+    display: inline-block;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    transition: all 0.3s ease-out;
+    &:hover {
+      animation-name: rubberBand;
+      color: var(--turquoise);
+      &:nth-child(even) {
         color: var(--red);
-        padding-left: 5px;
       }
     }
+  }
 
-    .contractor {
-      &::before {
-        content: "/";
-        color: var(--turquoise);
-        padding-right: 5px;
-      }
-    }
-
-    svg {
-      transition: all 0.15s ease 0s;
-      animation: tada-keyframes 3s ease infinite;
-      animation-fill-mode: both;
+  .h1TagOpen {
+    &::before {
+      content: "<h1>";
+      color: #515152;
+      font-size: 0.25em;
+      position: absolute;
+      margin-top: -5rem;
+      left: -1.5rem;
+      font-style: italic;
+      font-family: "Indie Flower", cursive;
     }
   }
 
-  .brand {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    .name {
-      font-size: 2.5em;
-    }
-
-    .tech {
-      cursor: pointer;
+  .h1TagClose {
+    &::after {
+      content: "</h1>";
+      color: #515152;
+      font-size: 0.25em;
+      position: absolute;
+      margin-top: -5rem;
+      left: -1.5rem;
+      font-style: italic;
+      font-family: "Indie Flower", cursive;
     }
   }
-}
 
-.brandTags {
-  .title {
-    font-size: var(--l-font-size);
-    margin: var(--s-spacing);
-  }
-
-  a {
-    font-size: var(--xl-font-size);
-    color: var(--link-color);
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    margin: var(--xs-spacing);
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
+  .openTag {
+    &::before {
+      content: "<";
     }
   }
-}
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4em;
+  .closeTag {
+    &::after {
+      content: "/>";
+    }
+  }
 
-  a {
-    color: var(--link-color);
-    text-decoration: none;
+  .webDeveloper {
+    color: #8d8d8d;
+    font-size: 1.5em;
+    &::after {
+      content: "/";
+      color: var(--red);
+      padding-left: 5px;
+    }
+  }
 
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
+  .contractor {
+    color: #8d8d8d;
+    font-size: 1.5em;
+    &::before {
+      content: "/";
+      color: var(--turquoise);
+      padding-right: 5px;
     }
   }
 }
 
-.title,
-.description {
-  text-align: center;
+.htmlOpen {
+  font-size: 1.3em;
+  color: #515152;
+  font-style: italic;
+  margin-left: 300px;
+  position: relative;
+  left: -25px;
+  &::before {
+    content: "<html/>";
+    font-family: "Indie Flower", cursive;
+  }
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5em;
+.bodyOpen {
+  font-size: 1.3em;
+  color: #515152;
+  font-style: italic;
+  margin-left: 300px;
+  &::before {
+    content: "<body>";
+    font-family: "Indie Flower", cursive;
+  }
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3em;
-}
-
-@keyframes tada-keyframes {
+@keyframes rubberBand {
   0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-  10%,
-  5% {
-    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -5deg);
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    -ms-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
   }
-  15%,
-  25%,
-  35%,
-  45% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 5deg);
-  }
-  20%,
-  30%,
   40% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -5deg);
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    -ms-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
   }
   50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    -ms-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    -ms-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    -ms-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
 }
