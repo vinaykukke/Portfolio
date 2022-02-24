@@ -1,22 +1,28 @@
 .main {
   padding: 2em 0;
   background-color: var(--container-background);
-  font-size: var(--default-font-size);
   overflow-y: scroll;
 }
 
 .scrollIdnicator {
   position: fixed;
   bottom: 0;
+  font-size: var(--default-font-size);
   left: calc(50% + 50px);
   margin-bottom: 2em;
   opacity: 0.7;
   z-index: 10;
+
+  @media screen and (max-width: 800px) {
+    left: calc(50% - 58.375px);
+  }
 }
+
 .scrollDown {
   text-align: center;
   color: white;
 }
+
 .magicMouse {
   position: relative;
   width: 18px;

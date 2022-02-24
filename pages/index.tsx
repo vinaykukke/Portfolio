@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useRef } from "react";
+import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
 import styles from "styles/home.module.scss";
 import getMetaTags from "data/metaData";
@@ -8,25 +8,27 @@ import Portfolio from "components/Portfolio";
 
 const Home = () => {
   const [showScroll, setScroll] = useState(true);
-  const loader = useRef(null);
-  const handleObserver = useCallback<IntersectionObserverCallback>(
-    (entries) => {
-      // Doing this because im observing one element
-      const target = entries[0];
-      if (target.isIntersecting) {
-        setScroll(false);
-      } else {
-        setScroll(true);
-      }
-    },
-    [setScroll]
-  );
-  useEffect(() => {
-    const observer = new IntersectionObserver(handleObserver);
-    if (loader.current) observer.observe(loader.current);
+  const observer = useRef<IntersectionObserver>(null);
+  const handleObserver: IntersectionObserverCallback = (entries) => {
+    /** Doing this only because im observing one entity */
+    const entry = entries[0];
 
-    return observer.disconnect;
-  }, [handleObserver]);
+    if (entry.isIntersecting) {
+      setScroll(false);
+    } else {
+      setScroll(true);
+    }
+  };
+
+  const handleCallback = (node: Element) => {
+    /** Remove pre-existing observer entities */
+    if (observer.current) observer.current.disconnect();
+    observer.current = new IntersectionObserver(handleObserver);
+
+    /** If the reference node is present then observe that node */
+    if (node) observer.current.observe(node);
+  };
+  const reference = useCallback(handleCallback, []);
 
   return (
     <>
@@ -36,12 +38,11 @@ const Home = () => {
         <meta charSet="UTF-8" />
         {getMetaTags()}
       </Head>
-
       <main className={styles.main}>
         <Header />
         <div className={styles.foreground}>
           <Hero />
-          <Portfolio reference={loader} />
+          <Portfolio reference={reference} />
         </div>
         {showScroll && (
           <div className={styles.scrollIdnicator}>

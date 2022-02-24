@@ -6,32 +6,48 @@
   flex-direction: column;
   justify-content: center;
 
+  @media screen and (max-width: 800px) {
+    padding: 2rem;
+  }
+
   &::before {
     content: "<body>";
     font-family: "Indie Flower", cursive;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: #515152;
     font-style: italic;
     position: relative;
     width: fit-content;
     top: -60px;
     left: -50px;
+    @media screen and (max-width: 800px) {
+      font-size: 2rem;
+      left: -1rem;
+    }
   }
 
   h1 {
-    font-size: 6em;
+    font-size: 6rem;
     font-weight: var(--bold);
     color: white;
     width: fit-content;
     margin: 0;
-
+    @media screen and (max-width: 800px) {
+      font-size: 4rem;
+    }
     &.intro {
       line-height: 1.5em;
     }
   }
 
   .mytitle {
-    margin: 2em 0;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #8d8d8d;
+    @media screen and (max-width: 800px) {
+      font-size: 2rem;
+      margin: 6rem 0;
+    }
   }
 
   .marginLeft {
@@ -58,12 +74,16 @@
     &::before {
       content: "<h1>";
       color: #515152;
-      font-size: 0.25em;
+      font-size: 0.25rem;
       position: absolute;
       margin-top: -1.5em;
       left: -1.5rem;
       font-style: italic;
       font-family: "Indie Flower", cursive;
+      @media screen and (max-width: 800px) {
+        font-size: 2rem;
+        left: 0;
+      }
     }
   }
 
@@ -72,12 +92,17 @@
     &::after {
       content: "</h1>";
       color: #515152;
-      font-size: 0.25em;
+      font-size: 0.25rem;
       position: absolute;
       margin-top: -5rem;
       left: -1.5rem;
       font-style: italic;
       font-family: "Indie Flower", cursive;
+      @media screen and (max-width: 800px) {
+        font-size: 2rem;
+        margin-top: -2rem;
+        left: 0;
+      }
     }
   }
 
@@ -94,8 +119,6 @@
   }
 
   .webDeveloper {
-    color: #8d8d8d;
-    font-size: 1.5em;
     &::after {
       content: "/";
       color: var(--red);
@@ -104,8 +127,6 @@
   }
 
   .contractor {
-    color: #8d8d8d;
-    font-size: 1.5em;
     &::before {
       content: "/";
       color: var(--turquoise);

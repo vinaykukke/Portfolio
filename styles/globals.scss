@@ -66,6 +66,14 @@
   --regular-weight: 400;
   --semi-bold: 600;
   --bold: 700;
+
+  /** Root Font size */
+  font-size: var(--default-font-size);
+
+  /* Responsive layout - Changing the font on mobile screens */
+  @media screen and (max-width: 800px) {
+    font-size: var(--xs-font-size);
+  }
 }
 
 html,
