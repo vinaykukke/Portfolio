@@ -1,167 +1,60 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-
 .main {
-  height: 100vh;
   padding: 2em 0;
   background-color: var(--container-background);
   font-size: var(--default-font-size);
   overflow-y: scroll;
-
-  .container {
-    margin: 8rem 0 8rem 18.75rem;
-  }
 }
 
-.heroElement {
-  width: 100%;
-  height: 100%;
-  line-height: 9.375em;
+.scrollIdnicator {
+  position: fixed;
+  bottom: 0;
+  left: calc(50% + 50px);
+  margin-bottom: 2em;
+  opacity: 0.7;
+  z-index: 10;
+}
+.scrollDown {
+  text-align: center;
+  color: white;
+}
+.magicMouse {
   position: relative;
-
-  h1 {
-    font-size: 6em;
-    font-weight: var(--bold);
-    color: white;
-    width: fit-content;
-    margin: 0;
+  width: 18px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 15px;
+  &.scroll i {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    border-radius: 4px;
+    background-color: white;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
-  .marginLeft {
-    margin-left: 0.25em;
-  }
-
-  .rubberband {
-    display: inline-block;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    transition: all 0.3s ease-out;
-    &:hover {
-      animation-name: rubberBand;
-      color: var(--turquoise);
-      &:nth-child(even) {
-        color: var(--red);
-      }
-    }
-  }
-
-  .h1TagOpen {
-    &::before {
-      content: "<h1>";
-      color: #515152;
-      font-size: 0.25em;
-      position: absolute;
-      margin-top: -5rem;
-      left: -1.5rem;
-      font-style: italic;
-      font-family: "Indie Flower", cursive;
-    }
-  }
-
-  .h1TagClose {
-    &::after {
-      content: "</h1>";
-      color: #515152;
-      font-size: 0.25em;
-      position: absolute;
-      margin-top: -5rem;
-      left: -1.5rem;
-      font-style: italic;
-      font-family: "Indie Flower", cursive;
-    }
-  }
-
-  .openTag {
-    &::before {
-      content: "<";
-    }
-  }
-
-  .closeTag {
-    &::after {
-      content: "/>";
-    }
-  }
-
-  .webDeveloper {
-    color: #8d8d8d;
-    font-size: 1.5em;
-    &::after {
-      content: "/";
-      color: var(--red);
-      padding-left: 5px;
-    }
-  }
-
-  .contractor {
-    color: #8d8d8d;
-    font-size: 1.5em;
-    &::before {
-      content: "/";
-      color: var(--turquoise);
-      padding-right: 5px;
-    }
+  &.scroll.vertical i {
+    width: 4px;
+    height: 9px;
+    margin-left: -2px;
+    animation: vertical-scroll 820ms ease-in-out infinite;
   }
 }
 
-.htmlOpen {
-  font-size: 1.3em;
-  color: #515152;
-  font-style: italic;
-  margin-left: 300px;
-  position: relative;
-  left: -25px;
-  &::before {
-    content: "<html/>";
-    font-family: "Indie Flower", cursive;
-  }
+/* for presantion. So, delete this */
+.presantion {
+  margin: 30px auto;
 }
-
-.bodyOpen {
-  font-size: 1.3em;
-  color: #515152;
-  font-style: italic;
-  margin-left: 300px;
-  &::before {
-    content: "<body>";
-    font-family: "Indie Flower", cursive;
-  }
-}
-
-@keyframes rubberBand {
+/* Animations for Magic Mouse*/
+@keyframes vertical-scroll {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    -ms-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    -ms-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
+    top: 6px;
   }
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    -ms-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    -ms-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    -ms-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+    top: 10px;
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    top: 6px;
   }
 }

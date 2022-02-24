@@ -1,0 +1,23 @@
+.squareContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  z-index: 10;
+  margin-left: 12.75rem;
+}
+
+.square {
+  flex-basis: 1.636%;
+  background-color: #1d1d1d;
+  box-shadow: 0 0 2px #000;
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  transition: 2s;
+
+  &:hover {
+    transition-duration: 0s;
+  }
+}

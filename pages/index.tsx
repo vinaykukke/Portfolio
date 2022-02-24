@@ -1,9 +1,33 @@
+import { useState, useCallback, useEffect, useRef } from "react";
 import Head from "next/head";
 import styles from "styles/home.module.scss";
 import getMetaTags from "data/metaData";
 import Header from "components/Header";
+import Hero from "components/Hero";
+import Portfolio from "components/Portfolio";
 
-export default function Home() {
+const Home = () => {
+  const [showScroll, setScroll] = useState(true);
+  const loader = useRef(null);
+  const handleObserver = useCallback<IntersectionObserverCallback>(
+    (entries) => {
+      // Doing this because im observing one element
+      const target = entries[0];
+      if (target.isIntersecting) {
+        setScroll(false);
+      } else {
+        setScroll(true);
+      }
+    },
+    [setScroll]
+  );
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver);
+    if (loader.current) observer.observe(loader.current);
+
+    return observer.disconnect;
+  }, [handleObserver]);
+
   return (
     <>
       <Head>
@@ -15,56 +39,23 @@ export default function Home() {
 
       <main className={styles.main}>
         <Header />
-        <div className={styles.htmlOpen} />
-        <div className={styles.bodyOpen} />
-        <div className={styles.container}>
-          <section id="hero" className={styles.heroElement}>
-            <h1 className={styles.h1TagOpen}>
-              <span className={styles.rubberband}>H</span>
-              <span className={styles.rubberband}>i</span>
-              <span className={styles.rubberband}>,</span>
-            </h1>
-            <h1>
-              <span className={styles.rubberband}>I</span>
-              <span className={styles.rubberband}>'</span>
-              <span className={styles.rubberband}>m</span>
-              <span className={`${styles.rubberband} ${styles.marginLeft}`}>
-                V
-              </span>
-              <span className={styles.rubberband}>i</span>
-              <span className={styles.rubberband}>n</span>
-              <span className={styles.rubberband}>a</span>
-              <span className={styles.rubberband}>y</span>
-              <span className={styles.rubberband}>,</span>
-            </h1>
-            <h1>
-              <span className={`${styles.rubberband} ${styles.openTag}`} />
-              <span className={styles.rubberband}>W</span>
-              <span className={styles.rubberband}>e</span>
-              <span className={styles.rubberband}>b</span>
-              <span className={styles.rubberband}></span>
-              <span className={`${styles.rubberband} ${styles.marginLeft}`}>
-                D
-              </span>
-              <span className={styles.rubberband}>e</span>
-              <span className={styles.rubberband}>v</span>
-              <span className={styles.rubberband}>e</span>
-              <span className={styles.rubberband}>l</span>
-              <span className={styles.rubberband}>o</span>
-              <span className={styles.rubberband}>p</span>
-              <span className={styles.rubberband}>e</span>
-              <span className={styles.rubberband}>r</span>
-              <span className={`${styles.rubberband} ${styles.closeTag}`} />
-              <div className={styles.h1TagClose} />
-            </h1>
-            <span className={styles.webDeveloper}>Front-End Developer</span>
-            <span className={styles.contractor}>Contractor</span>
-          </section>
-          <section id="about"></section>
-          <section id="work"></section>
-          <section id="contact"></section>
+        <div className={styles.foreground}>
+          <Hero />
+          <Portfolio reference={loader} />
         </div>
+        {showScroll && (
+          <div className={styles.scrollIdnicator}>
+            <div
+              className={`${styles.magicMouse} ${styles.scroll} ${styles.vertical} ${styles.presantion}`}
+            >
+              <i>↑↓</i>
+            </div>
+            <div className={styles.scrollDown}>↓ Scroll Down ↓</div>
+          </div>
+        )}
       </main>
     </>
   );
-}
+};
+
+export default Home;
