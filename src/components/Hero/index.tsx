@@ -20,7 +20,7 @@ const Hero = () => {
         <span className={styles.rubberband}>y</span>
         <span className={styles.rubberband}>,</span>
       </h1>
-      <h1 className={styles.intro}>
+      <h1 className={`${styles.intro} ${styles.typewrite}`}>
         <span className={`${styles.rubberband} ${styles.openTag}`} />
         <span className={styles.rubberband}>W</span>
         <span className={styles.rubberband}>e</span>
@@ -36,8 +36,8 @@ const Hero = () => {
         <span className={styles.rubberband}>e</span>
         <span className={styles.rubberband}>r</span>
         <span className={`${styles.rubberband} ${styles.closeTag}`} />
-        <div className={styles.h1TagClose} />
       </h1>
+      <div className={styles.h1TagClose} />
       <div className={styles.mytitle}>
         <span className={styles.webDeveloper}>Front-End Developer</span>
         <span className={styles.contractor}>Contractor</span>

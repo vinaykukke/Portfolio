@@ -14,10 +14,12 @@
     width: 100%;
     background-color: white;
     opacity: 0.5;
+    transition: transform 500ms;
 
     &:hover {
       opacity: 1;
       cursor: pointer;
+      transform: scale(1.2);
     }
   }
 }

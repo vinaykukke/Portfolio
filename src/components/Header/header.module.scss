@@ -17,6 +17,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  animation: nav-load 500ms ease-out;
 
   @media screen and (max-width: 800px) {
     display: none;
@@ -86,4 +87,13 @@
 #js-icon {
   position: relative;
   top: 4px;
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

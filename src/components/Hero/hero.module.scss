@@ -2,18 +2,20 @@
   position: relative;
   padding: 4rem 4rem 0rem 16.75rem;
   height: 100vh;
+  width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    padding: 2rem;
+    padding: 1.5rem;
+    overflow-x: hidden;
   }
 
   &::before {
     content: "<body>";
     font-family: "Indie Flower", cursive;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #515152;
     font-style: italic;
     position: relative;
@@ -32,11 +34,28 @@
     color: white;
     width: fit-content;
     margin: 0;
+
     @media screen and (max-width: 800px) {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
+
     &.intro {
       line-height: 1.5em;
+    }
+
+    &.typewrite {
+      font-family: "Roboto Mono", monospace;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: 0.15em solid var(--turquoise); /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      animation: typewriter 4s steps(44) 1s 1 normal both,
+        cursor 500ms steps(44) infinite;
+      letter-spacing: 0.05em;
+
+      @media screen and (max-width: 800px) {
+        font-size: 3.5rem;
+        letter-spacing: 0;
+      }
     }
   }
 
@@ -74,7 +93,7 @@
     &::before {
       content: "<h1>";
       color: #515152;
-      font-size: 0.25rem;
+      font-size: 1.5rem;
       position: absolute;
       margin-top: -1.5em;
       left: -1.5rem;
@@ -92,27 +111,30 @@
     &::after {
       content: "</h1>";
       color: #515152;
-      font-size: 0.25rem;
+      font-size: 1.5rem;
       position: absolute;
-      margin-top: -5rem;
       left: -1.5rem;
       font-style: italic;
       font-family: "Indie Flower", cursive;
       @media screen and (max-width: 800px) {
         font-size: 2rem;
-        margin-top: -2rem;
         left: 0;
       }
     }
   }
 
   .openTag {
+    color: var(--turquoise);
     &::before {
       content: "<";
     }
   }
 
   .closeTag {
+    color: var(--red);
+    &:hover {
+      color: var(--red);
+    }
     &::after {
       content: "/>";
     }
@@ -132,6 +154,27 @@
       color: var(--turquoise);
       padding-right: 5px;
     }
+  }
+}
+
+/* The typing effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--turquoise);
   }
 }
 
