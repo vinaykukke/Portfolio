@@ -1,0 +1,27 @@
+.portfolioHeader {
+  font-size: 4rem;
+  color: var(--turquoise);
+  margin: 0 0 40px 0;
+}
+
+.workSection {
+  padding: 4rem 4rem 4rem 16.75rem;
+
+  @media screen and (max-width: 800px) {
+    padding: 2rem;
+  }
+
+  .portfolioText {
+    color: white;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .anchor {
+    text-decoration: underline;
+    color: var(--turquoise);
+  }
+}

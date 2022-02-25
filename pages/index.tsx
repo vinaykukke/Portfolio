@@ -1,59 +1,62 @@
+import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import BrandIcon from "components/Logos/BrandIcon";
-import JsIcon from "components/Logos/JsIcon";
 import styles from "styles/home.module.scss";
 import getMetaTags from "data/metaData";
+import Header from "components/Header";
+import Hero from "components/Hero";
+import Portfolio from "components/Portfolio";
 
-export default function Home() {
+const Home = () => {
+  const [showScroll, setScroll] = useState(true);
+  const observer = useRef<IntersectionObserver>(null);
+  const handleObserver: IntersectionObserverCallback = (entries) => {
+    /** Doing this only because im observing one entity */
+    const entry = entries[0];
+
+    if (entry.isIntersecting) {
+      setScroll(false);
+    } else {
+      setScroll(true);
+    }
+  };
+
+  const handleCallback = (node: Element) => {
+    /** Remove pre-existing observer entities */
+    if (observer.current) observer.current.disconnect();
+    observer.current = new IntersectionObserver(handleObserver);
+
+    /** If the reference node is present then observe that node */
+    if (node) observer.current.observe(node);
+  };
+  const reference = useCallback(handleCallback, []);
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Vinay Kukke - Javascript Developer / Contractor</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
-          rel="stylesheet"
-        />
         <meta charSet="UTF-8" />
         {getMetaTags()}
       </Head>
-
       <main className={styles.main}>
-        <section id="hero" className={styles.heroElement}>
-          <div className={styles.heroTitle}>
-            <span>Javascript Developer / Contractor</span>
-            <JsIcon />
+        <Header />
+        <div className={styles.foreground}>
+          <Hero />
+          <Portfolio reference={reference} />
+        </div>
+        {showScroll && (
+          <div className={styles.scrollIdnicator}>
+            <div
+              className={`${styles.magicMouse} ${styles.scroll} ${styles.vertical} ${styles.presantion}`}
+            >
+              <i>↑↓</i>
+            </div>
+            <div className={styles.scrollDown}>↓ Scroll Down ↓</div>
           </div>
-          <div className={styles.brand}>
-            <BrandIcon />
-            <div className={styles.name}>Vinay Kukke</div>
-            <p className={styles.tech}>Tech Stack.</p>
-          </div>
-          <nav>
-            <ul className={styles.heroNav}>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <a href="#work">Work</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </section>
-        <section id="about"></section>
-        <section id="work"></section>
-        <section id="contact"></section>
+        )}
       </main>
-    </div>
+    </>
   );
-}
+};
+
+export default Home;

@@ -1,11 +1,43 @@
 .main {
   height: 100vh;
-  padding: 0 0.5em;
+  display: flex;
+}
+
+.chapterTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--container-background);
-  color: var(--hero-text-color);
+  height: 100%;
+  padding: 0 0.5em;
+  flex-basis: 50%;
+  background-color: var(--red);
+  color: var(--container-background);
   font-size: var(--default-font-size);
+
+  .title {
+    color: white;
+    font-size: var(--h-font-size);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .hexContainer {
+    position: absolute;
+    top: calc(10% - 30px);
+    left: calc(50% - (200px / 2));
+    z-index: 100;
+  }
+
+  .hex {
+    object-fit: contain;
+  }
+}
+
+.chapterContent {
+  flex-basis: 50%;
+  background-color: white;
+  line-height: 28px;
+  padding: 60px calc(200px / 1.5);
+  overflow: auto;
 }

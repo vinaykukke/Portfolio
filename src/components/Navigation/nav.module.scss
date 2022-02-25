@@ -1,0 +1,31 @@
+.navigation {
+  width: 100%;
+}
+
+.list {
+  padding: 0;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    width: 100%;
+    text-transform: capitalize;
+    line-height: 50px;
+    border-bottom: 1px solid #282828;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--turquoise);
+    }
+
+    &:first-child {
+      border-top: 1px solid #282828;
+    }
+  }
+}

@@ -1,10 +1,11 @@
 import * as React from "react";
 
-const BrandIcon = () => (
+const BrandIcon = (props) => (
   <svg
+    {...props}
     xmlns="http://www.w3.org/2000/svg"
-    width={200}
-    height={200}
+    width={120}
+    height={120}
     viewBox="0 0 24 24"
     strokeWidth="2"
     stroke="currentColor"

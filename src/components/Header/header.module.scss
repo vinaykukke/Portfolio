@@ -1,0 +1,99 @@
+.headerContainer {
+  width: 208px;
+  background-color: #181818;
+  color: var(--red);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 11;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  animation: nav-load 500ms ease-out;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+}
+
+.headerLogo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #282828;
+  padding-bottom: 25px;
+
+  span {
+    font-size: 0.75rem;
+  }
+
+  .blueLogo {
+    position: absolute;
+    top: 2px;
+    left: 38px;
+    color: var(--turquoise);
+    z-index: 0;
+  }
+
+  .redLogo {
+    z-index: 1;
+  }
+
+  .webDeveloper {
+    color: var(--turquoise);
+    &::after {
+      content: "/";
+      color: var(--red);
+      padding-left: 5px;
+    }
+  }
+
+  .contractor {
+    color: var(--red);
+    &::before {
+      content: "/";
+      color: var(--turquoise);
+      padding-right: 5px;
+    }
+  }
+}
+
+.iconGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  max-height: 250px;
+
+  > svg {
+    flex-basis: 33.33%;
+    &:hover {
+      color: var(--turquoise);
+    }
+  }
+}
+
+#js-icon {
+  position: relative;
+  top: 4px;
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
