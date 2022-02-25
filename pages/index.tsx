@@ -5,6 +5,7 @@ import getMetaTags from "data/metaData";
 import Header from "components/Header";
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
+import About from "components/About";
 
 const Home = () => {
   const [showScroll, setScroll] = useState(true);
@@ -14,16 +15,18 @@ const Home = () => {
     const entry = entries[0];
 
     if (entry.isIntersecting) {
-      setScroll(false);
-    } else {
       setScroll(true);
+    } else {
+      setScroll(false);
     }
   };
 
   const handleCallback = (node: Element) => {
     /** Remove pre-existing observer entities */
     if (observer.current) observer.current.disconnect();
-    observer.current = new IntersectionObserver(handleObserver);
+    observer.current = new IntersectionObserver(handleObserver, {
+      threshold: 0.9,
+    });
 
     /** If the reference node is present then observe that node */
     if (node) observer.current.observe(node);
@@ -41,8 +44,9 @@ const Home = () => {
       <main className={styles.main}>
         <Header />
         <div className={styles.foreground}>
-          <Hero />
-          <Portfolio reference={reference} />
+          <Hero reference={reference} />
+          <Portfolio />
+          <About />
         </div>
         {showScroll && (
           <div className={styles.scrollIdnicator}>

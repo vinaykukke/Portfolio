@@ -32,6 +32,7 @@
   align-items: center;
   border-bottom: 1px solid #282828;
   padding-bottom: 25px;
+  cursor: pointer;
 
   span {
     font-size: 0.75rem;
@@ -47,24 +48,6 @@
 
   .redLogo {
     z-index: 1;
-  }
-
-  .webDeveloper {
-    color: var(--turquoise);
-    &::after {
-      content: "/";
-      color: var(--red);
-      padding-left: 5px;
-    }
-  }
-
-  .contractor {
-    color: var(--red);
-    &::before {
-      content: "/";
-      color: var(--turquoise);
-      padding-right: 5px;
-    }
   }
 }
 

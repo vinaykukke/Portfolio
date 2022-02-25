@@ -1,6 +1,5 @@
 .heroSection {
   position: relative;
-  padding: 4rem 4rem 0rem 16.75rem;
   height: 100vh;
   width: fit-content;
   display: flex;
@@ -8,7 +7,6 @@
   justify-content: center;
 
   @media screen and (max-width: 800px) {
-    padding: 1.5rem;
     overflow-x: hidden;
   }
 
@@ -29,33 +27,8 @@
   }
 
   h1 {
-    font-size: 6rem;
-    font-weight: var(--bold);
-    color: white;
-    width: fit-content;
-    margin: 0;
-
-    @media screen and (max-width: 800px) {
-      font-size: 3.5rem;
-    }
-
     &.intro {
       line-height: 1.5em;
-    }
-
-    &.typewrite {
-      font-family: "Roboto Mono", monospace;
-      overflow: hidden; /* Ensures the content is not revealed until the animation */
-      border-right: 0.15em solid var(--turquoise); /* The typwriter cursor */
-      white-space: nowrap; /* Keeps the content on a single line */
-      animation: typewriter 4s steps(44) 1s 1 normal both,
-        cursor 500ms steps(44) infinite;
-      letter-spacing: 0.05em;
-
-      @media screen and (max-width: 800px) {
-        font-size: 3.5rem;
-        letter-spacing: 0;
-      }
     }
   }
 
@@ -71,21 +44,6 @@
 
   .marginLeft {
     margin-left: 0.25em;
-  }
-
-  .rubberband {
-    display: inline-block;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    transition: all 0.3s ease-out;
-    &:hover {
-      animation-name: rubberBand;
-      color: var(--turquoise);
-      &:nth-child(even) {
-        color: var(--red);
-      }
-    }
   }
 
   .h1TagOpen {
@@ -108,6 +66,8 @@
 
   .h1TagClose {
     position: relative;
+    bottom: 1rem;
+
     &::after {
       content: "</h1>";
       color: #515152;
@@ -154,64 +114,5 @@
       color: var(--turquoise);
       padding-right: 5px;
     }
-  }
-}
-
-/* The typing effect */
-@keyframes typewriter {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes cursor {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: var(--turquoise);
-  }
-}
-
-@keyframes rubberBand {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    -ms-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    -ms-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    -ms-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    -ms-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    -ms-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    -ms-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
   }
 }

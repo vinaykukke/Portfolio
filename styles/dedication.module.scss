@@ -1,0 +1,21 @@
+.prayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  .child {
+    flex-basis: 33.33%;
+  }
+
+  @media screen and (max-width: 425px) {
+    .child {
+      flex-basis: 100%;
+    }
+  }
+}

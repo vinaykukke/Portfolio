@@ -1,39 +1,22 @@
 import * as React from "react";
+import Link from "next/link";
 import Nav from "components/Navigation";
 import BrandIcon from "components/Logos/BrandIcon";
 import LinkedIn from "components/Logos/LinkedIn";
 import styles from "./header.module.scss";
-// import JsIcon from "components/Logos/JsIcon";
-// import Css from "components/Logos/Css";
-// import Html from "components/Logos/Html";
-// import NodeJs from "components/Logos/NodeJs";
-// import NextJsLogo from "components/Logos/next-js";
-// import ReactJs from "components/Logos/ReactJs";
-// import TypescriptLogo from "components/Logos/typescript";
-// import MongoDb from "components/Logos/MongoDb";
-// import DockerLogo from "components/Logos/Docker";
 
 const Header = () => (
   <div className={styles.headerContainer}>
-    <div className={styles.headerLogo}>
-      <BrandIcon className={styles.redLogo} />
-      <BrandIcon className={styles.blueLogo} />
-      <div>
-        <span className={styles.webDeveloper}>Web Developer</span>
-        <span className={styles.contractor}>Contractor</span>
+    <Link href="/">
+      <div className={styles.headerLogo}>
+        <BrandIcon className={styles.redLogo} />
+        <BrandIcon className={styles.blueLogo} />
+        <div>
+          <span className="end-with__backslash">Web Developer</span>
+          <span className="begin-with__backslash">Contractor</span>
+        </div>
       </div>
-    </div>
-    {/* <div className={styles.iconGrid}>
-      <JsIcon />
-      <Css />
-      <Html />
-      <NodeJs />
-      <NextJsLogo />
-      <ReactJs />
-      <TypescriptLogo />
-      <MongoDb />
-      <DockerLogo />
-    </div> */}
+    </Link>
     <Nav />
     <a
       className="social"
