@@ -67,14 +67,6 @@
   --regular-weight: 400;
   --semi-bold: 600;
   --bold: 700;
-
-  /** Root Font size */
-  font-size: var(--default-font-size);
-
-  /* Responsive layout - Changing the font on mobile screens */
-  @media screen and (max-width: 800px) {
-    font-size: var(--xs-font-size);
-  }
 }
 
 html,
@@ -83,6 +75,15 @@ body {
   margin: 0;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  /** Root Font size */
+  font-size: var(--default-font-size);
+  background-color: var(--container-background);
+
+  /* Responsive layout - Changing the font on mobile screens */
+  @media screen and (max-width: 800px) {
+    font-size: var(--xs-font-size);
+  }
 }
 
 a {
@@ -92,4 +93,156 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+section.section-main__padding {
+  padding: 4rem 4rem 0rem 16.75rem;
+
+  @media screen and (max-width: 800px) {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+    font-weight: var(--bold);
+    color: white;
+    width: fit-content;
+    margin: 0;
+
+    @media screen and (max-width: 800px) {
+      font-size: 3.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 4rem;
+    color: var(--turquoise);
+    margin: 0 0 40px 0;
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: white;
+  }
+
+  p {
+    color: white;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .anchor {
+    text-decoration: underline;
+    color: var(--turquoise);
+  }
+}
+
+.rubberband {
+  display: inline-block;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  transition: all 0.3s ease-out;
+  &:hover {
+    animation-name: rubberBand;
+    color: var(--turquoise);
+    &:nth-child(even) {
+      color: var(--red);
+    }
+  }
+}
+
+.typewrite {
+  font-family: "Roboto Mono", monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid var(--turquoise); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    cursor 500ms steps(44) infinite;
+  letter-spacing: 0.05em;
+
+  @media screen and (max-width: 800px) {
+    font-size: 3.5rem;
+    letter-spacing: 0;
+  }
+}
+
+.end-with__backslash {
+  color: var(--turquoise);
+  &::after {
+    content: "/";
+    color: var(--red);
+    padding-left: 5px;
+  }
+}
+
+.begin-with__backslash {
+  color: var(--red);
+  &::before {
+    content: "/";
+    color: var(--turquoise);
+    padding-right: 5px;
+  }
+}
+
+@keyframes rubberBand {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    -ms-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    -ms-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    -ms-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    -ms-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    -ms-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* The typing effect */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--turquoise);
+  }
 }

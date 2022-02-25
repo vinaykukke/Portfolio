@@ -1,41 +1,45 @@
 import * as React from "react";
 import styles from "./hero.module.scss";
 
-const Hero = () => {
+const Hero = (props: { reference: any }) => {
   return (
-    <section id="hero" className={styles.heroSection}>
+    <section
+      id="hero"
+      className={`section-main__padding ${styles.heroSection}`}
+      ref={props.reference}
+    >
       <h1 className={styles.h1TagOpen}>
-        <span className={styles.rubberband}>H</span>
-        <span className={styles.rubberband}>i</span>
-        <span className={styles.rubberband}>,</span>
+        <span className="rubberband">H</span>
+        <span className="rubberband">i</span>
+        <span className="rubberband">,</span>
       </h1>
       <h1 className={styles.intro}>
-        <span className={styles.rubberband}>I</span>
-        <span className={styles.rubberband}>'</span>
-        <span className={styles.rubberband}>m</span>
-        <span className={`${styles.rubberband} ${styles.marginLeft}`}>V</span>
-        <span className={styles.rubberband}>i</span>
-        <span className={styles.rubberband}>n</span>
-        <span className={styles.rubberband}>a</span>
-        <span className={styles.rubberband}>y</span>
-        <span className={styles.rubberband}>,</span>
+        <span className="rubberband">I</span>
+        <span className="rubberband">'</span>
+        <span className="rubberband">m</span>
+        <span className={`rubberband ${styles.marginLeft}`}>V</span>
+        <span className="rubberband">i</span>
+        <span className="rubberband">n</span>
+        <span className="rubberband">a</span>
+        <span className="rubberband">y</span>
+        <span className="rubberband">,</span>
       </h1>
-      <h1 className={`${styles.intro} ${styles.typewrite}`}>
-        <span className={`${styles.rubberband} ${styles.openTag}`} />
-        <span className={styles.rubberband}>W</span>
-        <span className={styles.rubberband}>e</span>
-        <span className={styles.rubberband}>b</span>
-        <span className={styles.rubberband}></span>
-        <span className={`${styles.rubberband} ${styles.marginLeft}`}>D</span>
-        <span className={styles.rubberband}>e</span>
-        <span className={styles.rubberband}>v</span>
-        <span className={styles.rubberband}>e</span>
-        <span className={styles.rubberband}>l</span>
-        <span className={styles.rubberband}>o</span>
-        <span className={styles.rubberband}>p</span>
-        <span className={styles.rubberband}>e</span>
-        <span className={styles.rubberband}>r</span>
-        <span className={`${styles.rubberband} ${styles.closeTag}`} />
+      <h1 className={`typewrite ${styles.intro}`}>
+        <span className={`rubberband ${styles.openTag}`} />
+        <span className="rubberband">W</span>
+        <span className="rubberband">e</span>
+        <span className="rubberband">b</span>
+        <span className="rubberband"></span>
+        <span className={`rubberband ${styles.marginLeft}`}>D</span>
+        <span className="rubberband">e</span>
+        <span className="rubberband">v</span>
+        <span className="rubberband">e</span>
+        <span className="rubberband">l</span>
+        <span className="rubberband">o</span>
+        <span className="rubberband">p</span>
+        <span className="rubberband">e</span>
+        <span className="rubberband">r</span>
+        <span className={`rubberband ${styles.closeTag}`} />
       </h1>
       <div className={styles.h1TagClose} />
       <div className={styles.mytitle}>

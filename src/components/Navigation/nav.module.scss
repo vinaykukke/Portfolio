@@ -27,5 +27,9 @@
     &:first-child {
       border-top: 1px solid #282828;
     }
+
+    &:last-child {
+      cursor: pointer;
+    }
   }
 }
