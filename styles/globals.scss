@@ -29,6 +29,7 @@
     var(--lightblue),
     var(--purple)
   );
+  --text-gradient: linear-gradient(45deg, #3d9dea 20%, #ce11ee 70%);
 
   /** Spacing */
   --xs-spacing: 5px;
@@ -186,6 +187,17 @@ section.section-main__padding {
     color: var(--turquoise);
     padding-right: 5px;
   }
+}
+
+.gradientText {
+  background: var(--text-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.fit-content {
+  width: fit-content;
 }
 
 @keyframes rubberBand {

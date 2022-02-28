@@ -22,16 +22,14 @@ const Dedication = () => {
             height={400}
           />
         </div>
-
         <div className={styles.child}>
           <Image
-            src="/sriramakrishna.jpeg"
+            src="/sriramakrishna.jpg"
             layout="responsive"
             width={320}
             height={400}
           />
         </div>
-
         <div className={styles.child}>
           <Image
             src="/mother.jpeg"

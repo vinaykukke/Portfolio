@@ -1,33 +1,21 @@
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
+.imageBackground {
+  vertical-align: middle;
+  width: 100%;
 
-/* Create four equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 25%;
-  display: block;
-
-  .imageBackground {
-    vertical-align: middle;
-    width: 100%;
-    background-color: white;
-    opacity: 0.5;
-    transition: transform 500ms;
-
-    &:hover {
-      opacity: 1;
-      cursor: pointer;
-      transform: scale(1.2);
-    }
+  &:hover {
+    cursor: pointer;
   }
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+.swiper {
+  width: 40%;
+  margin: 5em auto;
+  @media screen and (max-width: 425px) {
+    width: 70%;
   }
+}
+
+.slide {
+  border-radius: 1rem;
+  background-color: white;
 }

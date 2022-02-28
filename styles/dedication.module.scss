@@ -3,19 +3,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .grid {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 
   .child {
     flex-basis: 33.33%;
-  }
-
-  @media screen and (max-width: 425px) {
-    .child {
+    margin: 1rem;
+    @media screen and (max-width: 768px) {
       flex-basis: 100%;
+    }
+
+    img {
+      border-radius: 1rem;
     }
   }
 }
