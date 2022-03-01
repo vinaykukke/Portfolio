@@ -22,7 +22,7 @@ const images = [
   `${IMG_ROOT}/zopa.png`,
   `${IMG_ROOT}/pacewisdom.jpeg`,
   `${IMG_ROOT}/talentier.png`,
-  `${IMG_ROOT}/leboncoin.jpeg`,
+  `${IMG_ROOT}/leboncoin.png`,
   `${IMG_ROOT}/corotos.jpeg`,
 ];
 
