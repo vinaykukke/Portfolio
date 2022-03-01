@@ -18,6 +18,7 @@ const images = [
   `${IMG_ROOT}/schibsted.png`,
   `${IMG_ROOT}/adevinta.png`,
   `${IMG_ROOT}/pharmeasy.png`,
+  `${IMG_ROOT}/india-gold.jpeg`,
   `${IMG_ROOT}/zopa.png`,
   `${IMG_ROOT}/pacewisdom.jpeg`,
   `${IMG_ROOT}/talentier.png`,
@@ -38,7 +39,7 @@ const Gallery = () => (
         <Image
           src={src}
           width={250}
-          height={300}
+          height={250}
           layout="responsive"
           className={styles.imageBackground}
         />
