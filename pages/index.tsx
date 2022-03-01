@@ -6,6 +6,7 @@ import Header from "components/Header";
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
 import About from "components/About";
+import MobileNav from "components/MobileNav";
 
 const Home = () => {
   const [showScroll, setScroll] = useState(true);
@@ -43,6 +44,7 @@ const Home = () => {
       </Head>
       <main className={styles.main}>
         <Header />
+        <MobileNav />
         <div className={styles.foreground}>
           <Hero reference={reference} />
           <Portfolio />

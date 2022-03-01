@@ -4,8 +4,10 @@
 
 :root {
   /** Background Colors */
+  --body-background: #1d1d1d;
   --container-background: #292929;
   --primary-logo-background: #000000;
+  --menu-background: #181818;
 
   /** Link Colors */
   --link-color: #0070f3;
@@ -79,7 +81,7 @@ body {
 
   /** Root Font size */
   font-size: var(--default-font-size);
-  background-color: var(--container-background);
+  background-color: var(--body-background);
 
   /* Responsive layout - Changing the font on mobile screens */
   @media screen and (max-width: 800px) {
