@@ -22,7 +22,7 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.headerContainer}>
+    <>
       <div className={containerClass} id="toggle" onClick={handleClick}>
         <span className={styles.top} />
         <span className={styles.middle} />
@@ -48,7 +48,7 @@ const Header = () => {
           <LinkedIn />
         </a>
       </div>
-    </div>
+    </>
   );
 };
 

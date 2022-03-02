@@ -1,29 +1,3 @@
-.headerContainer {
-  width: 208px;
-  background-color: var(--menu-background);
-  color: var(--red);
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: auto;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 11;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    background-color: transparent;
-  }
-}
-
 .headerLogo {
   width: 100%;
   display: flex;
@@ -150,7 +124,8 @@
 
 .overlay {
   position: fixed;
-  background: var(--menu-background);
+  background-color: var(--menu-background);
+  color: var(--red);
   top: 0;
   left: 0;
   width: 100%;
@@ -166,7 +141,7 @@
   align-items: center;
 
   @media screen and (min-width: 800px) {
-    width: inherit;
+    width: 208px;
     visibility: visible;
     opacity: 1;
     height: 100%;
