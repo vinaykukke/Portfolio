@@ -202,6 +202,10 @@ section.section-main__padding {
   width: fit-content;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 @keyframes rubberBand {
   0% {
     -webkit-transform: scale3d(1, 1, 1);
