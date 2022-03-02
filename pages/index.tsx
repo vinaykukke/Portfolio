@@ -11,14 +11,14 @@ const Home = () => {
   const [showScroll, setScroll] = useState(true);
   const observer = useRef<IntersectionObserver>(null);
   const handleObserver: IntersectionObserverCallback = (entries) => {
-    /** Doing this only because im observing one entity */
-    const entry = entries[0];
-
-    if (entry.isIntersecting) {
-      setScroll(true);
-    } else {
-      setScroll(false);
-    }
+    /** Go through all entities that are being observed and check for intersection */
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
   };
 
   const handleCallback = (node: Element) => {
