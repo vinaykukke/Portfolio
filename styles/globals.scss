@@ -98,11 +98,17 @@ a {
   box-sizing: border-box;
 }
 
-section.section-main__padding {
-  padding: 4rem 4rem 0rem 16.75rem;
+section.section-main__wrapper {
+  max-width: 1800px;
+
+  &#contact {
+    margin: 5rem 0;
+  }
 
   @media screen and (max-width: 800px) {
-    padding: 2rem;
+    &#contact {
+      margin: 10rem 0;
+    }
   }
 
   h1 {

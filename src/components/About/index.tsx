@@ -1,7 +1,7 @@
 import * as React from "react";
 
 const About = () => (
-  <section id="about" className="section-main__padding">
+  <section id="about" className="section-main__wrapper">
     <h2>Who I am</h2>
     <h3>
       <span className="end-with__backslash">Freelancer by day</span>

@@ -1,0 +1,73 @@
+.section__contact {
+  height: 100vh;
+}
+
+.contactLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--red);
+
+  a {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+
+    @media screen and (max-width: 800px) {
+      font-size: 1.7rem;
+    }
+  }
+
+  .contact__email {
+    cursor: pointer;
+    &::before {
+      content: "kukke06@gmail.com";
+    }
+
+    &:hover {
+      &::before {
+        content: "Copy to clipboard";
+        color: var(--turquoise);
+      }
+    }
+  }
+
+  .contact__instagram,
+  .contact__linkedin {
+    &:hover {
+      color: var(--turquoise);
+    }
+  }
+}
+
+.great {
+  color: var(--turquoise);
+}
+
+.exclamation {
+  color: var(--red);
+  margin-left: 1rem;
+}
+
+.clipboardStatus {
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  color: white;
+  padding: 0.5rem;
+  bottom: 10%;
+
+  &[data-status="SUCCESS"] {
+    background-color: green;
+  }
+
+  &[data-status="ERROR"] {
+    background-color: red;
+  }
+
+  .status_message {
+    margin-left: 0.3rem;
+  }
+}

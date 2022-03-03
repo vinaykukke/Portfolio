@@ -5,7 +5,7 @@ const Hero = (props: { reference: any }) => {
   return (
     <section
       id="hero"
-      className={`section-main__padding ${styles.heroSection}`}
+      className={`section-main__wrapper ${styles.heroSection}`}
       ref={props.reference}
     >
       <h1 className={styles.h1TagOpen}>

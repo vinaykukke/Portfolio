@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Nav from "components/Navigation";
 import BrandIcon from "components/Logos/BrandIcon";
 import LinkedIn from "components/Logos/LinkedIn";
 import styles from "./header.module.scss";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   const [showOverlay, toggleOverlay] = useState(false);
+  const handlePathChange = () => showOverlay && toggleOverlay(false);
+
   const overlayClass = showOverlay
     ? `${styles.overlay} ${styles.open}`
     : `${styles.overlay}`;
@@ -20,6 +24,9 @@ const Header = () => {
       return !prev;
     });
   };
+
+  /** If path changes then close menu */
+  useEffect(handlePathChange, [router.asPath]);
 
   return (
     <>
