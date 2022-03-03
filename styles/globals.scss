@@ -99,11 +99,16 @@ a {
 }
 
 section.section-main__wrapper {
-  margin: 5rem 0;
   max-width: 1800px;
 
+  &#contact {
+    margin: 5rem 0;
+  }
+
   @media screen and (max-width: 800px) {
-    margin: 10rem 0;
+    &#contact {
+      margin: 10rem 0;
+    }
   }
 
   h1 {

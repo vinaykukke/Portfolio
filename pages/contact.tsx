@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="Contact" className="section-main__wrapper">
+    <section id="contact" className="section-main__wrapper">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
