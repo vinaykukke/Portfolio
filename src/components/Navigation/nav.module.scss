@@ -30,6 +30,10 @@
       border-top: 1px solid #282828;
     }
 
+    &:last-child {
+      cursor: pointer;
+    }
+
     @media screen and (max-width: 800px) {
       line-height: 8rem;
       font-size: 2.5rem;

@@ -2,7 +2,6 @@ import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
 import styles from "styles/home.module.scss";
 import getMetaTags from "data/metaData";
-import Header from "components/Header";
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
 import About from "components/About";
@@ -41,24 +40,19 @@ const Home = () => {
         <meta charSet="UTF-8" />
         {getMetaTags()}
       </Head>
-      <main className={styles.main}>
-        <Header />
-        <div className={styles.foreground}>
-          <Hero reference={reference} />
-          <Portfolio />
-          <About />
-        </div>
-        {showScroll && (
-          <div className={styles.scrollIdnicator}>
-            <div
-              className={`${styles.magicMouse} ${styles.scroll} ${styles.vertical} ${styles.presantion}`}
-            >
-              <i>↑↓</i>
-            </div>
-            <div className={styles.scrollDown}>↓ Scroll Down ↓</div>
+      <Hero reference={reference} />
+      <Portfolio />
+      <About />
+      {showScroll && (
+        <div className={styles.scrollIdnicator}>
+          <div
+            className={`${styles.magicMouse} ${styles.scroll} ${styles.vertical} ${styles.presantion}`}
+          >
+            <i>↑↓</i>
           </div>
-        )}
-      </main>
+          <div className={styles.scrollDown}>↓ Scroll Down ↓</div>
+        </div>
+      )}
     </>
   );
 };

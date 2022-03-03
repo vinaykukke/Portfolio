@@ -1,5 +1,5 @@
 import * as React from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import styles from "./nav.module.scss";
 
 const Nav = () => (
@@ -18,8 +18,9 @@ const Nav = () => (
         Work
       </li>
       <li>
-        {/* <Link href="/contact">Contact</Link> */}
-        Contact
+        <Link href="/contact">
+          <a href="#">Contact</a>
+        </Link>
       </li>
     </ul>
   </nav>
