@@ -4,7 +4,7 @@ import styles from "styles/dedication.module.scss";
 
 const Dedication = () => {
   return (
-    <section className="section-main__padding">
+    <section className="section-main__wrapper">
       <Header />
       <div className={styles.prayer}>
         <h2>Dedications</h2>

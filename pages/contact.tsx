@@ -22,40 +22,36 @@ const Contact = () => {
     status: STATUS.default,
     message: STATUS_MESSAGE.default,
   });
-  const copyToClipBoard = (
+
+  const copyToClipBoard = async (
     e: SyntheticEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     /* Copy the text inside the text field */
     const email = e.currentTarget.attributes.getNamedItem("data-email").value;
-
-    navigator.clipboard
-      .writeText(email)
-      .then(() => {
-        setCopiedState(true);
-        setStatus({
-          status: STATUS.success,
-          message: STATUS_MESSAGE.success,
-        });
-      })
-      .catch(() => {
-        setStatus({
-          status: STATUS.error,
-          message: STATUS_MESSAGE.error,
-        });
-      })
-      .finally(() =>
-        setTimeout(() => {
-          setStatus({
-            status: STATUS.default,
-            message: STATUS_MESSAGE.default,
-          });
-          setCopiedState(false);
-        }, 2500)
-      );
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopiedState(true);
+      setStatus({
+        status: STATUS.success,
+        message: STATUS_MESSAGE.success,
+      });
+    } catch (_) {
+      setStatus({
+        status: STATUS.error,
+        message: STATUS_MESSAGE.error,
+      });
+    }
+    setTimeout(() => {
+      setStatus({
+        status: STATUS.default,
+        message: STATUS_MESSAGE.default,
+      });
+      setCopiedState(false);
+    }, 2500);
   };
 
   return (
-    <section id="Contact" className="section-main__padding">
+    <section id="Contact" className="section-main__wrapper">
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
