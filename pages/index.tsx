@@ -1,10 +1,12 @@
 import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
-import styles from "styles/home.module.scss";
-import getMetaTags from "data/metaData";
+
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
 import About from "components/About";
+
+import getMetaTags from "data/metaData";
+import styles from "styles/home.module.scss";
 
 const Home = () => {
   const [showScroll, setScroll] = useState(true);

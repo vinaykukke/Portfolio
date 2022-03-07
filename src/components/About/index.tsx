@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 const About = () => (
   <section id="about" className="section-main__wrapper">

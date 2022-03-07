@@ -1,33 +1,9 @@
-.chapterTitle {
-  .title {
-    font-size: var(--h-font-size);
-  }
+.slide_work {
+  text-align: center;
 }
 
-.workList {
-  text-transform: capitalize;
-  padding: 0;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .work {
-    a {
-      font-weight: var(--semi-bold);
-      text-underline-offset: 0.5em;
-      &:hover {
-        text-decoration: underline white 3px;
-      }
-    }
-
-    &:not(:nth-child(1)) {
-      &::before {
-        content: "/";
-        padding: 0 0.5em;
-      }
-    }
-  }
+.image_work {
+  background-color: white;
+  width: 50px;
+  height: 50px;
 }

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 :root {
   /** Background Colors */
@@ -165,7 +164,7 @@ section.section-main__wrapper {
 }
 
 .typewrite {
-  font-family: "Roboto Mono", monospace;
+  font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid var(--turquoise); /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
