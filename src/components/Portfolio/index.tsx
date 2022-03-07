@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import styles from "./portfolio.module.scss";
 /** Importing Gallery on demand */
 const Gallery = dynamic(() => import("components/Gallery"));
 
@@ -39,7 +40,9 @@ const Portfolio = () => {
         </Link>{" "}
         Page
       </p>
-      {visible && <Gallery />}
+      <div className={styles.gallery_container__skeleton}>
+        {visible && <Gallery />}
+      </div>
     </section>
   );
 };
