@@ -1,3 +1,7 @@
 .gallery_container__skeleton {
-  height: 400px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
