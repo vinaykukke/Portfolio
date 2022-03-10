@@ -42,4 +42,4 @@ const About = () => (
   </section>
 );
 
-export default About;
+export default React.memo(About);

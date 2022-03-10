@@ -1,7 +1,6 @@
 import { useState, SyntheticEvent } from "react";
 import Head from "next/head";
 import { ClipboardError, ClipboardSuccess } from "components/Logos/Clipboard";
-import {} from "./";
 import styles from "styles/contact.module.scss";
 
 enum STATUS {

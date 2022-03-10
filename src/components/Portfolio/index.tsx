@@ -1,19 +1,12 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useRef, useState, memo } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import Skeleton from "@mui/material/Skeleton";
+import CircularProgress from "@mui/material/CircularProgress";
 import styles from "./portfolio.module.scss";
 
 /** Importing Gallery on demand */
 const Gallery = dynamic(() => import("components/Gallery"), {
-  loading: () => (
-    <Skeleton
-      variant="rectangular"
-      sx={{ bgcolor: "grey.600", borderRadius: "1rem" }}
-      width={250}
-      height={250}
-    />
-  ),
+  loading: () => <CircularProgress />,
 });
 
 const Portfolio = () => {
@@ -58,4 +51,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default memo(Portfolio);

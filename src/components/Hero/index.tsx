@@ -50,4 +50,4 @@ const Hero = (props: { reference: any }) => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);
