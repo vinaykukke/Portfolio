@@ -14,8 +14,7 @@ const Nav = () => (
         My Skills
       </li>
       <li>
-        {/* <Link href="/work">Work</Link> */}
-        Work
+        <Link href="/work">Work</Link>
       </li>
       <li>
         <Link href="/contact">

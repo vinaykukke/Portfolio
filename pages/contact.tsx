@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section-main__wrapper">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact - Vinay Kukke</title>
       </Head>
       {copiedToCpilboard && clipboardApiStatus && (
         <div

@@ -20,7 +20,7 @@
     line-height: 50px;
     border-bottom: 1px solid #282828;
     text-align: center;
-    cursor: not-allowed;
+    cursor: pointer;
 
     &:hover {
       color: var(--turquoise);
@@ -30,8 +30,9 @@
       border-top: 1px solid #282828;
     }
 
-    &:last-child {
-      cursor: pointer;
+    &:nth-child(1),
+    &:nth-child(2) {
+      cursor: not-allowed;
     }
 
     @media screen and (max-width: 800px) {

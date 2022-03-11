@@ -5,17 +5,11 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { IProps } from "./types";
 import styles from "./mediacard.module.scss";
 
-interface IProps {
-  src: string;
-  title: string;
-  url: string;
-  about: string;
-}
-
 const MediaCard = (props: IProps) => (
-  <Card sx={{ maxWidth: 345, m: "0.5rem" }}>
+  <Card className={styles.media_card__container}>
     <Image
       className={styles.image_work}
       width={140}
@@ -27,7 +21,7 @@ const MediaCard = (props: IProps) => (
       placeholder="blur"
       blurDataURL={props.url}
     />
-    <CardContent>
+    <CardContent className={styles.media_card__content}>
       <Typography
         sx={{ textTransform: "capitalize" }}
         gutterBottom
@@ -42,8 +36,14 @@ const MediaCard = (props: IProps) => (
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small">Share</Button>
-      <Button size="small">Learn More</Button>
+      <Button size="medium">
+        <a href={props.link} target="_blank">
+          Visit
+        </a>
+      </Button>
+      <Button disabled size="medium">
+        My Contribution
+      </Button>
     </CardActions>
   </Card>
 );
