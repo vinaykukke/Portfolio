@@ -1,7 +1,6 @@
 import { useState, SyntheticEvent } from "react";
 import Head from "next/head";
 import { ClipboardError, ClipboardSuccess } from "components/Logos/Clipboard";
-import {} from "./";
 import styles from "styles/contact.module.scss";
 
 enum STATUS {
@@ -53,7 +52,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section-main__wrapper">
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact - Vinay Kukke</title>
       </Head>
       {copiedToCpilboard && clipboardApiStatus && (
         <div

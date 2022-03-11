@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Link from "next/link";
 import styles from "./nav.module.scss";
 
@@ -14,8 +14,7 @@ const Nav = () => (
         My Skills
       </li>
       <li>
-        {/* <Link href="/work">Work</Link> */}
-        Work
+        <Link href="/work">Work</Link>
       </li>
       <li>
         <Link href="/contact">

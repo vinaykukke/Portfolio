@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import styles from "./hero.module.scss";
 
 const Hero = (props: { reference: any }) => {
@@ -50,4 +50,4 @@ const Hero = (props: { reference: any }) => {
   );
 };
 
-export default Hero;
+export default React.memo(Hero);

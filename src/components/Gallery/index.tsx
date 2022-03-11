@@ -1,30 +1,18 @@
-import * as React from "react";
+import React from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Autoplay } from "swiper";
 import { AutoplayOptions } from "swiper/types";
+import images from "data/imageData";
 import styles from "./gallery.module.scss";
 import "swiper/css";
 import "swiper/css/effect-cards";
 
-const IMG_ROOT = "/logos/companies";
 const playOptions: AutoplayOptions = {
   delay: 2500,
   disableOnInteraction: false,
   pauseOnMouseEnter: true,
 };
-
-const images = [
-  `${IMG_ROOT}/schibsted.png`,
-  `${IMG_ROOT}/adevinta.png`,
-  `${IMG_ROOT}/pharmeasy.png`,
-  `${IMG_ROOT}/india-gold.jpeg`,
-  `${IMG_ROOT}/zopa.png`,
-  `${IMG_ROOT}/pacewisdom.jpeg`,
-  `${IMG_ROOT}/talentier.png`,
-  `${IMG_ROOT}/leboncoin.png`,
-  `${IMG_ROOT}/corotos.jpeg`,
-];
 
 const Gallery = () => (
   <Swiper
@@ -34,10 +22,11 @@ const Gallery = () => (
     className={styles.swiper}
     autoplay={playOptions}
   >
-    {images.map((src, i) => (
+    {images.map((img, i) => (
       <SwiperSlide className={styles.slide} key={i}>
         <Image
-          src={src}
+          src={img.src}
+          alt={img.title}
           width={250}
           height={250}
           layout="responsive"

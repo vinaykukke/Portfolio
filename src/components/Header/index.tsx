@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Nav from "components/Navigation";
 import BrandIcon from "components/Logos/BrandIcon";
@@ -59,4 +59,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default React.memo(Header);

@@ -1,33 +1,6 @@
-.chapterTitle {
-  .title {
-    font-size: var(--h-font-size);
-  }
-}
-
-.workList {
-  text-transform: capitalize;
-  padding: 0;
-  list-style-image: none;
-  list-style-position: outside;
-  list-style-type: none;
+.media_card__container {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .work {
-    a {
-      font-weight: var(--semi-bold);
-      text-underline-offset: 0.5em;
-      &:hover {
-        text-decoration: underline white 3px;
-      }
-    }
-
-    &:not(:nth-child(1)) {
-      &::before {
-        content: "/";
-        padding: 0 0.5em;
-      }
-    }
-  }
+  flex-wrap: wrap;
 }

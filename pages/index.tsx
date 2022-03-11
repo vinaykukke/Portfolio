@@ -1,10 +1,9 @@
 import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
-import styles from "styles/home.module.scss";
-import getMetaTags from "data/metaData";
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
 import About from "components/About";
+import styles from "styles/home.module.scss";
 
 const Home = () => {
   const [showScroll, setScroll] = useState(true);
@@ -36,9 +35,15 @@ const Home = () => {
     <>
       <Head>
         <title>Vinay Kukke - Javascript Developer / Contractor</title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta charSet="UTF-8" />
-        {getMetaTags()}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+          as="style"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+        />
       </Head>
       <Hero reference={reference} />
       <Portfolio />

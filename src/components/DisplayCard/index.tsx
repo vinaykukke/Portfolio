@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import LinkedIn from "components/Logos/LinkedIn";
 import styles from "./displaycard.module.scss";
 

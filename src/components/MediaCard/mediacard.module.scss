@@ -1,0 +1,19 @@
+.image_work {
+  background-color: white;
+}
+
+.media_card {
+  &__container {
+    margin: 0.5rem;
+  }
+
+  &__content {
+    @media screen and (min-width: 725px) and (max-width: 1023px) {
+      min-height: 100px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      min-height: 195px;
+    }
+  }
+}
