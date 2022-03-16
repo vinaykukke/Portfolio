@@ -1,5 +1,6 @@
-import * as React from "react";
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -41,8 +42,8 @@ const MediaCard = (props: IProps) => (
           Visit
         </a>
       </Button>
-      <Button disabled size="medium">
-        My Contribution
+      <Button size="medium">
+        <Link href={`/case-study/${props.title}`}>My Contribution</Link>
       </Button>
     </CardActions>
   </Card>

@@ -32,7 +32,7 @@ const Portfolio = () => {
     <section id="work" className="section-main__wrapper" ref={reference}>
       <h2>My Portfolio</h2>
       <p>
-        A small gallery of recent projects chosen by me. Ive done them all
+        A small gallery of recent projects chosen by me. I've done them all
         together with amazing people in different countries all over the world.
         <br />
         <br />

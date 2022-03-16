@@ -1,149 +1,51 @@
-import Nav from "components/Navigation";
 import Head from "next/head";
-import Image from "next/image";
+import Typography from "@mui/material/Typography";
 import styles from "styles/about.module.scss";
 
 const About = () => (
-  <section className={styles.main}>
+  <section className="section-main__wrapper">
     <Head>
       <title>About - Vinay Kukke</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
-    <div className={styles.chapterTitle}>
-      <h1 className={styles.title}>About</h1>
-      <div className={styles.hexContainer}>
-        <Image
-          className={styles.hex}
-          src="/portrait.png"
-          width={200}
-          height={200}
-          alt="portrait - Vinay"
-        />
-      </div>
-      <Nav />
-    </div>
-    <div className={styles.chapterContent}>
-      I am a UX Designer and Art Director from Austria living in Berlin.
-      Artworks and illustrations were my gateway to the creative industry which
-      led to the foundation of my own studio and to first steps in the digital
-      world. Art Direction Starting with basic websites several years ago I
-      found myself working as an Art Director for complex projects with a
-      holistic approach soon. Visually appealing designs, subtle details and
-      brand guidelines combined to innovative interfaces across various touch
-      points became my daily companion. Out of this love for aesthetic design my
-      passion for functionality and structure evolved. Jumping right into
-      Photoshop didn’t feel accurate anymore and skipping the steps of building
-      a framework based on functionality and usability became inevitable. UX
-      Design A user-centered mindset and sensitivity for design turned out to be
-      the perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process. I am a UX
-      Designer and Art Director from Austria living in Berlin. Artworks and
-      illustrations were my gateway to the creative industry which led to the
-      foundation of my own studio and to first steps in the digital world. Art
-      Direction Starting with basic websites several years ago I found myself
-      working as an Art Director for complex projects with a holistic approach
-      soon. Visually appealing designs, subtle details and brand guidelines
-      combined to innovative interfaces across various touch points became my
-      daily companion. Out of this love for aesthetic design my passion for
-      functionality and structure evolved. Jumping right into Photoshop didn’t
-      feel accurate anymore and skipping the steps of building a framework based
-      on functionality and usability became inevitable. UX Design A
-      user-centered mindset and sensitivity for design turned out to be the
-      perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process. I am a UX
-      Designer and Art Director from Austria living in Berlin. Artworks and
-      illustrations were my gateway to the creative industry which led to the
-      foundation of my own studio and to first steps in the digital world. Art
-      Direction Starting with basic websites several years ago I found myself
-      working as an Art Director for complex projects with a holistic approach
-      soon. Visually appealing designs, subtle details and brand guidelines
-      combined to innovative interfaces across various touch points became my
-      daily companion. Out of this love for aesthetic design my passion for
-      functionality and structure evolved. Jumping right into Photoshop didn’t
-      feel accurate anymore and skipping the steps of building a framework based
-      on functionality and usability became inevitable. UX Design A
-      user-centered mindset and sensitivity for design turned out to be the
-      perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process. I am a UX
-      Designer and Art Director from Austria living in Berlin. Artworks and
-      illustrations were my gateway to the creative industry which led to the
-      foundation of my own studio and to first steps in the digital world. Art
-      Direction Starting with basic websites several years ago I found myself
-      working as an Art Director for complex projects with a holistic approach
-      soon. Visually appealing designs, subtle details and brand guidelines
-      combined to innovative interfaces across various touch points became my
-      daily companion. Out of this love for aesthetic design my passion for
-      functionality and structure evolved. Jumping right into Photoshop didn’t
-      feel accurate anymore and skipping the steps of building a framework based
-      on functionality and usability became inevitable. UX Design A
-      user-centered mindset and sensitivity for design turned out to be the
-      perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process. I am a UX
-      Designer and Art Director from Austria living in Berlin. Artworks and
-      illustrations were my gateway to the creative industry which led to the
-      foundation of my own studio and to first steps in the digital world. Art
-      Direction Starting with basic websites several years ago I found myself
-      working as an Art Director for complex projects with a holistic approach
-      soon. Visually appealing designs, subtle details and brand guidelines
-      combined to innovative interfaces across various touch points became my
-      daily companion. Out of this love for aesthetic design my passion for
-      functionality and structure evolved. Jumping right into Photoshop didn’t
-      feel accurate anymore and skipping the steps of building a framework based
-      on functionality and usability became inevitable. UX Design A
-      user-centered mindset and sensitivity for design turned out to be the
-      perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process. I am a UX
-      Designer and Art Director from Austria living in Berlin. Artworks and
-      illustrations were my gateway to the creative industry which led to the
-      foundation of my own studio and to first steps in the digital world. Art
-      Direction Starting with basic websites several years ago I found myself
-      working as an Art Director for complex projects with a holistic approach
-      soon. Visually appealing designs, subtle details and brand guidelines
-      combined to innovative interfaces across various touch points became my
-      daily companion. Out of this love for aesthetic design my passion for
-      functionality and structure evolved. Jumping right into Photoshop didn’t
-      feel accurate anymore and skipping the steps of building a framework based
-      on functionality and usability became inevitable. UX Design A
-      user-centered mindset and sensitivity for design turned out to be the
-      perfect fit when collaborating with agencies, clients and brands to
-      develop digital concepts and solve problems together. This rough framework
-      outlines my process of developing digital experiences: 1. RESEARCH and
-      gather the present state 2. STRUCTURE setup and content of the project 3.
-      CONCEPT AND STRATEGY 4. CREATE, evaluate and iterate deliverables like
-      Personas Site maps Use cases and scenarios User flow Sketches and
-      Infographics Wireframes Communicating the conceptual approach/UX strategy
-      and reasoning behind it, is present during the whole process.
-    </div>
+    <Typography className={styles.about} variant="h1" color="text.primary">
+      <span>About</span>
+      <span className={styles.me}>Me</span>
+      <span className={styles.period}>.</span>
+    </Typography>
+    <Typography variant="h3" mt="2rem" gutterBottom color="text.primary">
+      I'm a Web Developer with over 8 years of experiences in wide range of web
+      technologies.
+    </Typography>
+    <Typography mt="1rem" color="text.primary">
+      You can also call me a senior developer, señor developer, full stack
+      developer, frontend developer or by any other market defined
+      function-title. I'm also a multi-disciplinary maker with over 8 years of
+      experiences in wide range of disciplines, manager, advisor, entrepreneur,
+      traveler, philosopher and more.
+    </Typography>
+    <Typography mt="1rem" color="text.primary">
+      I don’t like to define myself by the work I’ve done. I define myself by
+      the work I want to do. Skills can be taught - everything can be learned
+      with eough time, single minded focus and deication. I live by this
+      philosophy. I prefer to keep learning, continue challenging myself, and do
+      interesting things.
+    </Typography>
+    <Typography mt="1rem" color="text.primary">
+      Fueled by high energy levels and enthusiasm, I’m easily inspired and more
+      then willing to follow my fascinations wherever they take me. I’m
+      passionate, expressive, multi-talented spirit with a natural ability to
+      entertain and inspire.
+    </Typography>
+    <Typography mt="1rem" color="text.primary">
+      My abundant energy fuels me in the pursuit of many interests, hobbies,
+      areas of study and artistic endeavors. I’m a fast learner, able to pick up
+      new skills and juggle different projects and roles with relative ease.
+    </Typography>
+    <Typography mt="1rem" mb="3rem" color="text.primary">
+      I like to develop expertise in a number of areas over the course of my
+      life and career. I currently work remotely with a selected freelance
+      client base and I'm open for new opportunities.
+    </Typography>
   </section>
 );
 
