@@ -15,7 +15,7 @@ const Sphere = (props: any) => {
   const ref = useRef<THREE.Mesh>(null);
 
   /** Subscribe this component to the render-loop, rotate the mesh every frame */
-  useFrame(() => (ref.current.rotation.y += 0.01));
+  useFrame(() => (ref.current.rotation.y += 0.002));
 
   /** Return the view, these are regular Threejs elements expressed in JSX */
   return (
@@ -65,16 +65,10 @@ const DeepSpace = () => {
 // };
 
 const Skills = () => (
-  <section
-    id="skills"
-    className={`section-main__wrapper ${styles.canvas_container__three}`}
-  >
+  <section id="three-js" className={styles.canvas_container__three}>
     <Head>
-      <title>Skills - Vinay Kukke</title>
+      <title>Three-Js Model Earth Demo</title>
     </Head>
-    {/* <Typography variant="h1" color="text.primary">
-      Some demonstrable skills using popular Javascript libraries.
-    </Typography> */}
     <Canvas>
       <OrbitControls />
       <Stars
@@ -85,8 +79,7 @@ const Skills = () => (
         saturation={100}
         fade
       />
-      <ambientLight intensity={0.5} />
-      <spotLight position={[10, 15, 10]} angle={0.3} />
+      <ambientLight intensity={2} />
       <Suspense fallback={null}>
         <Sphere />
       </Suspense>

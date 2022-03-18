@@ -8,12 +8,14 @@
   }
 
   &__content {
-    @media screen and (min-width: 725px) and (max-width: 1023px) {
-      min-height: 100px;
-    }
+    &[data-page="work"] {
+      @media screen and (min-width: 725px) and (max-width: 1023px) {
+        min-height: 100px;
+      }
 
-    @media screen and (min-width: 1024px) {
-      min-height: 195px;
+      @media screen and (min-width: 1024px) {
+        min-height: 195px;
+      }
     }
   }
 }

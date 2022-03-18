@@ -4,4 +4,5 @@ export interface IProps {
   url: string;
   about: string;
   link: string;
+  actionItems?: boolean;
 }
