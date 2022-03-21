@@ -2,9 +2,10 @@ import { Suspense, useCallback, useMemo, useRef } from "react";
 import THREE from "three";
 import Head from "next/head";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, useTexture } from "@react-three/drei";
 
 const Points = () => {
+  const colorMap = useTexture("/point.png");
   const bufferRef = useRef<THREE.BufferAttribute>(null);
   let t = 0;
   let f = 0.002;
@@ -17,6 +18,7 @@ const Points = () => {
   const sep = 3;
   const positions = useMemo(() => {
     const arr = [];
+    /** Printing points along the XZ plane 100x100 grid */
     for (let xi = 0; xi < count; xi++) {
       for (let zi = 0; zi < count; zi++) {
         const x = sep * (xi - count / 2);
@@ -32,6 +34,7 @@ const Points = () => {
     const positions = bufferRef.current.array;
     t += 15;
     let i = 0;
+    /** Itirate through all the points on the XZ plane and change Y for each one of them */
     for (let xi = 0; xi < count; xi++) {
       for (let zi = 0; zi < count; zi++) {
         const x = sep * (xi - count / 2);
@@ -41,6 +44,7 @@ const Points = () => {
         i += 3;
       }
     }
+    /** Force the component to update */
     bufferRef.current.needsUpdate = true;
   });
 
@@ -60,6 +64,10 @@ const Points = () => {
         size={0.5}
         color="#ffffff"
         alphaTest={0.5}
+        sizeAttenuation
+        transparent={true}
+        opacity={1.0}
+        map={colorMap}
       />
     </points>
   );
@@ -73,7 +81,7 @@ const WaveFunction = () => (
     <Canvas camera={{ position: [100, 50, 0], fov: 75 }}>
       <OrbitControls />
       <ambientLight intensity={2} />
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={null}>
         <Points />
       </Suspense>
     </Canvas>
