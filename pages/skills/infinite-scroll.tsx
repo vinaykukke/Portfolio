@@ -53,7 +53,8 @@ const InfiniteScroll = () => {
         if (prev && json.results) return [...prev, ...json.results];
       });
     };
-    fetchApi();
+    /** Because the Star wars API only has 9 pages */
+    if (page < 10) fetchApi();
   }, [page]);
 
   return (
