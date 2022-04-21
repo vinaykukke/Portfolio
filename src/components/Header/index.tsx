@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import Nav from "components/Navigation";
 import BrandIcon from "components/Logos/BrandIcon";
 import LinkedIn from "components/Logos/LinkedIn";
 import styles from "./header.module.scss";
-import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();

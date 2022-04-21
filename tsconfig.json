@@ -17,7 +17,8 @@
       "data/*": ["src/data/*"],
       "cache/*": ["src/cache/*"],
       "theme/*": ["src/theme/*"],
-      "styles/*": ["styles/*"]
+      "styles/*": ["styles/*"],
+      "shaders/*": ["src/shaders/*"]
     },
     "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,

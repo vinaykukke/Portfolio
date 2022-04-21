@@ -11,9 +11,11 @@
   a {
     margin: 1rem 0;
     font-size: 1.2rem;
+    width: 180px;
 
     @media screen and (max-width: 800px) {
       font-size: 1.7rem;
+      width: auto;
     }
   }
 

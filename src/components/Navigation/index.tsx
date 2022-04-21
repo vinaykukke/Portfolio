@@ -5,22 +5,18 @@ import styles from "./nav.module.scss";
 const Nav = () => (
   <nav className={styles.navigation}>
     <ul className={styles.list}>
-      <li>
-        {/* <Link href="/about">About</Link> */}
-        About
-      </li>
-      <li>
-        {/* <Link href="/skills">My Skills</Link> */}
-        My Skills
-      </li>
-      <li>
-        <Link href="/work">Work</Link>
-      </li>
-      <li>
-        <Link href="/contact">
-          <a href="#">Contact</a>
-        </Link>
-      </li>
+      <Link href="/about">
+        <li>About</li>
+      </Link>
+      <Link href="/skills">
+        <li>Skills</li>
+      </Link>
+      <Link href="/work">
+        <li>Work</li>
+      </Link>
+      <Link href="/contact">
+        <li>Contact</li>
+      </Link>
     </ul>
   </nav>
 );

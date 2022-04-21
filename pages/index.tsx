@@ -2,7 +2,6 @@ import { useState, useCallback, useRef } from "react";
 import Head from "next/head";
 import Hero from "components/Hero";
 import Portfolio from "components/Portfolio";
-import About from "components/About";
 import styles from "styles/home.module.scss";
 
 const Home = () => {
@@ -47,7 +46,6 @@ const Home = () => {
       </Head>
       <Hero reference={reference} />
       <Portfolio />
-      <About />
       {showScroll && (
         <div className={styles.scrollIdnicator}>
           <div
