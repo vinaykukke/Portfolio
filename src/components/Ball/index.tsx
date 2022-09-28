@@ -8,12 +8,11 @@ import styles from "./ball.module.scss";
 let isUserInteracting = false;
 
 /** User Interaction Event*/
-const mouseMoveEndEvent = new Event("mouseMoveEnd");
+let mouseMoveEndEvent: Event;
 let timeout: NodeJS.Timeout = null;
 
 /** Vectors for mouse events */
-const moveMouse = new THREE.Vector2();
-let orbit;
+let orbit: THREE.Object3D;
 
 const AnimatedBall = () => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -136,21 +135,16 @@ const AnimatedBall = () => {
       1000 * 10
     );
 
-    /** Offset values for the canvas */
-    const x = event.clientX / window.innerWidth;
-    const y = event.clientY / window.innerHeight;
-
-    /** calculate pointer position in normalized device coordinates (-1 to +1) */
-    moveMouse.x = x * 2 - 1;
-    moveMouse.y = -y * 2 + 1;
-
-    let scale = -0.005;
+    const scale = -0.005;
     orbit.rotateY(event.movementX * scale);
     orbit.rotateX(event.movementY * scale);
-    orbit.rotation.z = 0; //this is important to keep the camera level..
+    orbit.rotation.z = 0; // This is important to keep the camera level..
   };
 
-  useEffect(() => init(), []);
+  useEffect(() => {
+    init();
+    mouseMoveEndEvent = new Event("mouseMoveEnd");
+  }, []);
 
   useEffect(() => {
     /** User Interaction Event */
@@ -163,16 +157,13 @@ const AnimatedBall = () => {
     /** Start the animation */
     isUserInteracting = true;
 
-    //the camera rotation pivot
+    /** The camera rotation pivot */
     orbit = new THREE.Object3D();
-    orbit.rotation.order = "YXZ"; //this is important to keep level, so Z should be the last axis to rotate in order...
+    orbit.rotation.order = "YXZ"; // This is important to keep level, so Z should be the last axis to rotate in order...
     orbit.position.copy(mesh.position);
     scene.add(orbit);
 
-    //offset the camera and add it to the pivot
-    //you could adapt the code so that you can 'zoom' by changing the z value in camera.position in a mousewheel event..
-    // let cameraDistance = 1;
-    // camera.position.z = cameraDistance;
+    /** offset the camera and add it to the pivot */
     orbit.add(camera);
 
     animate();
