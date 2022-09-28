@@ -1,7 +1,6 @@
 .main {
   padding: 4rem 4rem 0rem 16.75rem;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  height: 100vh;
 
   @media screen and (max-width: 800px) {
     padding: 2rem;
