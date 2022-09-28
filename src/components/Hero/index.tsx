@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "./hero.module.scss";
 
-const Hero = (props: { reference: any }) => {
+const Hero = () => {
   return (
     <section
       id="hero"
       className={`section-main__wrapper ${styles.heroSection}`}
-      ref={props.reference}
     >
       <h1 className={styles.h1TagOpen}>
         <span className="rubberband">H</span>

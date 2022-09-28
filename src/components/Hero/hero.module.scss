@@ -1,5 +1,6 @@
 .heroSection {
-  position: relative;
+  position: absolute;
+  z-index: 1;
   height: 100vh;
   width: fit-content;
   display: flex;
