@@ -5,7 +5,7 @@ import { OrbitControls, Stars } from "@react-three/drei";
 import Earth from "components/Earth";
 import styles from "styles/skills.module.scss";
 
-const Skills = () => {
+const ModelEarth = () => {
   return (
     <section id="three-js" className={styles.canvas_container__three}>
       <Head>
@@ -34,4 +34,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default ModelEarth;
