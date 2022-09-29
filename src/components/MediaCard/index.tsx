@@ -23,8 +23,7 @@ const MediaCard = (props: IProps) => {
         alt={props.title}
         loading="lazy"
         layout="responsive"
-        placeholder="blur"
-        blurDataURL={props.url}
+        placeholder="empty"
       />
       <CardContent className={styles.media_card__content} data-page={data_page}>
         <Typography

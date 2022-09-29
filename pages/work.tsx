@@ -16,7 +16,6 @@ const Work = () => {
             <MediaCard
               src={img.src}
               title={img.title}
-              url={img.url}
               about={img.about}
               link={img.link}
               actionItems
