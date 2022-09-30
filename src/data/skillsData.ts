@@ -28,6 +28,20 @@ const skills = [
       "A low poly 3D model of a marble bust with baked normal, AO, roughness and emission map.",
     link: "marble-bust",
   },
+  {
+    src: `${IMG_ROOT}/wooden-table.png`,
+    title: "Wooden Table",
+    about:
+      "A low poly 3D model of a wooden table with baked normal, AO, roughness and emission map.",
+    link: "wooden-table",
+  },
+  {
+    src: `${IMG_ROOT}/rock.png`,
+    title: "Rock",
+    about:
+      "A low poly 3D model of a rock with baked normal, AO, roughness and emission map.",
+    link: "rock",
+  },
 ];
 
 export default skills;
