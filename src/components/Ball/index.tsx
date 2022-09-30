@@ -16,7 +16,6 @@ let orbit: THREE.Object3D;
 
 const AnimatedBall = () => {
   const rootRef = useRef<HTMLDivElement>(null);
-
   let timeStart: number;
   let timeDelta: number;
   let time: number;
