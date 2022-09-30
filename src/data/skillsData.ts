@@ -42,6 +42,13 @@ const skills = [
       "A low poly 3D model of a rock with baked normal, AO, roughness and emission map.",
     link: "rock",
   },
+  {
+    src: `${IMG_ROOT}/animated-ball.png`,
+    title: "Animated Ball",
+    about:
+      "A colorful ball that animates on click. The waves are modeled after a sine function",
+    link: "animated-ball",
+  },
 ];
 
 export default skills;

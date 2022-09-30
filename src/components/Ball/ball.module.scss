@@ -1,11 +1,9 @@
 .three_js__root {
-  position: absolute;
-  z-index: 0;
-  width: 400px;
-  height: 400px;
-  left: calc(100vw - 450px);
-
   @media screen and (max-width: 720px) {
+    position: absolute;
+    z-index: 0;
+    width: 400px;
+    height: 400px;
     left: -8px;
     top: 200px;
   }
