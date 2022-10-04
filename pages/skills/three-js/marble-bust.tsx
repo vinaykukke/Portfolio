@@ -14,6 +14,7 @@ const MarbelBust = () => {
       <Canvas>
         <OrbitControls
           screenSpacePanning={false}
+          enablePan={false}
           minDistance={0.5}
           maxDistance={0.5}
         />
