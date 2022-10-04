@@ -14,6 +14,7 @@ const ModelGasGiant = () => {
       <Canvas>
         <OrbitControls
           screenSpacePanning={false}
+          enablePan={false}
           minDistance={0}
           maxDistance={10}
         />

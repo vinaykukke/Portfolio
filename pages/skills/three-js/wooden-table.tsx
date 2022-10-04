@@ -14,6 +14,7 @@ const ModelTable = () => {
       <Canvas>
         <OrbitControls
           screenSpacePanning={false}
+          enablePan={false}
           minDistance={0}
           maxDistance={2}
         />

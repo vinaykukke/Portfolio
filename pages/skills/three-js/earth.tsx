@@ -14,6 +14,7 @@ const ModelEarth = () => {
       <Canvas>
         <OrbitControls
           screenSpacePanning={false}
+          enablePan={false}
           minDistance={1200}
           maxDistance={1200.1}
         />
