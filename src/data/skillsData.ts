@@ -49,6 +49,13 @@ const skills = [
       "A colorful ball that animates on click. The waves are modeled after a sine function",
     link: "animated-ball",
   },
+  {
+    src: `${IMG_ROOT}/gas-giant.png`,
+    title: "Gas Giant",
+    about:
+      "A medium poly 3D model of a gas giant like planet with a ring system and alpha map.",
+    link: "gas-giant",
+  },
 ];
 
 export default skills;
