@@ -50,11 +50,37 @@ const skills = [
     link: "animated-ball",
   },
   {
-    src: `${IMG_ROOT}/gas-giant.png`,
+    src: `${IMG_ROOT}/gas_giant_thumbnail.png`,
     title: "Gas Giant",
     about:
       "A medium poly 3D model of a gas giant like planet with a ring system and alpha map.",
     link: "gas-giant",
+  },
+];
+
+export const photoRendersData = [
+  {
+    src: `${IMG_ROOT}/marble-bust.png`,
+    thumbnail: `${IMG_ROOT}/marble-bust.png`,
+  },
+  {
+    src: `${IMG_ROOT}/earth.png`,
+    thumbnail: `${IMG_ROOT}/earth_thumbnail.png`,
+  },
+  {
+    src: `${IMG_ROOT}/hologram.png`,
+    thumbnail: `${IMG_ROOT}/hologram_thumbnail.png`,
+  },
+  {
+    src: `${IMG_ROOT}/gas_giant.png`,
+    thumbnail: `${IMG_ROOT}/gas_giant_thumbnail.png`,
+  },
+];
+
+export const animationsData = [
+  {
+    src: `${IMG_ROOT}/hologram.mp4`,
+    thumbnail: `${IMG_ROOT}/hologram_thumbnail.png`,
   },
 ];
 
