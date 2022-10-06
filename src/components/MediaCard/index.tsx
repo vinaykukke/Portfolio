@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import Link from "next/link";
 import { useRouter } from "next/router";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -19,36 +18,38 @@ const MediaCard = (props: IProps) => {
         className={styles.image_work}
         width={140}
         height={140}
-        src={props.src}
+        src={props.thumbnail ? props.thumbnail : props.src}
         alt={props.title}
         loading="lazy"
         layout="responsive"
         placeholder="empty"
       />
-      <CardContent className={styles.media_card__content} data-page={data_page}>
-        <Typography
-          sx={{ textTransform: "capitalize" }}
-          gutterBottom
-          variant="h5"
-          component="div"
+      {props.title || props.about ? (
+        <CardContent
+          className={styles.media_card__content}
+          data-page={data_page}
         >
-          {props.title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {props.about ||
-            "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica"}
-        </Typography>
-      </CardContent>
+          <Typography
+            sx={{ textTransform: "capitalize" }}
+            gutterBottom
+            variant="h5"
+            component="div"
+          >
+            {props.title}
+          </Typography>
+          {props.about && (
+            <Typography variant="body2" color="text.secondary">
+              {props.about}
+            </Typography>
+          )}
+        </CardContent>
+      ) : null}
       {props.actionItems && (
         <CardActions>
           <Button size="medium">
             <a href={props.link} target="_blank">
               Visit
             </a>
-          </Button>
-          <Button disabled size="medium">
-            {/* <Link href={`/case-study/${props.title}`}>My Contribution</Link> */}
-            My Contribution
           </Button>
         </CardActions>
       )}
