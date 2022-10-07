@@ -39,7 +39,12 @@ const Skills = () => {
         {photoRendersData.map((ps, i) => (
           <Grid item xs={12} sm={6} lg={4} xl={3} key={i}>
             <CardActionArea href={ps.src} target="_blank">
-              <MediaCard src={ps.src} thumbnail={ps.thumbnail} />
+              <MediaCard
+                src={ps.src}
+                thumbnail={ps.thumbnail}
+                title={ps.title}
+                about={ps.about}
+              />
             </CardActionArea>
           </Grid>
         ))}
@@ -49,10 +54,15 @@ const Skills = () => {
         <span className="begin-with__backslash">Animations</span>
       </Typography>
       <Grid container spacing={{ xs: 2, md: 3 }}>
-        {animationsData.map((ps, i) => (
+        {animationsData.map((an, i) => (
           <Grid item xs={12} sm={6} lg={4} xl={3} key={i}>
-            <CardActionArea href={ps.src} target="_blank">
-              <MediaCard src={ps.src} thumbnail={ps.thumbnail} />
+            <CardActionArea href={an.src} target="_blank">
+              <MediaCard
+                src={an.src}
+                thumbnail={an.thumbnail}
+                title={an.title}
+                about={an.about}
+              />
             </CardActionArea>
           </Grid>
         ))}

@@ -62,18 +62,30 @@ export const photoRendersData = [
   {
     src: `${IMG_ROOT}/marble-bust.png`,
     thumbnail: `${IMG_ROOT}/marble-bust.png`,
+    title: "Marble Bust",
+    about:
+      "A realistic marble bust with ambient occlusion, roughness and realistic reflections.",
   },
   {
     src: `${IMG_ROOT}/earth.png`,
     thumbnail: `${IMG_ROOT}/earth_thumbnail.png`,
+    title: "Earth",
+    about:
+      "Earth as viewed from space. Includes shadows for the clouds and atmospheric scattering.",
   },
   {
     src: `${IMG_ROOT}/hologram.png`,
     thumbnail: `${IMG_ROOT}/hologram_thumbnail.png`,
+    title: "Hologram",
+    about:
+      "A futuristic hologram rendered with a projector and multiple projected vertices.",
   },
   {
     src: `${IMG_ROOT}/gas_giant.png`,
     thumbnail: `${IMG_ROOT}/gas_giant_thumbnail.png`,
+    title: "Gas Giant",
+    about:
+      "A saturn like planet as viewed from space. Includes atmospheric scattering and a ring system.",
   },
 ];
 
@@ -81,6 +93,9 @@ export const animationsData = [
   {
     src: `${IMG_ROOT}/hologram.mp4`,
     thumbnail: `${IMG_ROOT}/hologram_thumbnail.png`,
+    title: "Hologram",
+    about:
+      "A futuristic hologram animation rendered with a projector and multiple projected vertices.",
   },
 ];
 

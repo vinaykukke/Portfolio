@@ -24,26 +24,21 @@ const MediaCard = (props: IProps) => {
         layout="responsive"
         placeholder="empty"
       />
-      {props.title || props.about ? (
-        <CardContent
-          className={styles.media_card__content}
-          data-page={data_page}
+      <CardContent className={styles.media_card__content} data-page={data_page}>
+        <Typography
+          sx={{ textTransform: "capitalize" }}
+          gutterBottom
+          variant="h5"
+          component="div"
         >
-          <Typography
-            sx={{ textTransform: "capitalize" }}
-            gutterBottom
-            variant="h5"
-            component="div"
-          >
-            {props.title}
+          {props.title}
+        </Typography>
+        {props.about && (
+          <Typography variant="body2" color="text.secondary">
+            {props.about}
           </Typography>
-          {props.about && (
-            <Typography variant="body2" color="text.secondary">
-              {props.about}
-            </Typography>
-          )}
-        </CardContent>
-      ) : null}
+        )}
+      </CardContent>
       {props.actionItems && (
         <CardActions>
           <Button size="medium">
